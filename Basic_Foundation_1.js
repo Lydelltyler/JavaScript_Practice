@@ -9,6 +9,14 @@ function get_array() {
     return arr;
 }
 
+// 2. Get even 1000
+function newarray () {
+
+var sum = 0
+
+for (var i = 0; i<= 1000; i + 2)
+    sum+=i
+}
 
 // 2. Get even 1000 
 function sum_even_numbers() {

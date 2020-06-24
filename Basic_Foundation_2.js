@@ -11,10 +11,11 @@ function big_array() {
 
 // 2. Print Low, Return High 
 
-var low = 0
-var high = 0
+function high_array(arr) {
 
-function high_array() {
+    var low = arr[0]
+    var high = arr[0]
+
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] < low) {
             low = arr[i];
@@ -137,27 +138,21 @@ function addSeven(arr) {
 
 // 10. Reverse Array 
 
-function reverse(arr) {
-
-    var x = 0;
-    var y = 1;
-
+function reverseArr(arr) {
+    var counter = 1
 
     for (var i = 0; i < arr.length; i++) {
-        var temp = arr[x];
-        if (i <= ((arr.length - 2) / 2)) {
-            arr[i] = arr[arr.length - y]
-            arr[arr.length - y] = temp
-            y++
-            x++
-            console.log(temp)
-            console.log(x)
+        var temp = arr[i];
+        if (i <= arr.length / 2) {
+            arr[i] = arr[arr.length - counter];
+            arr[arr.length - counter] = temp;
+            counter++
         }
     }
-
     return arr;
-
 }
+reverseArr([3, 1, 6, 4, 2]);
+
 
 // 11. Outlook: Negative
 
